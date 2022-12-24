@@ -1,5 +1,5 @@
 # RibbitBoardGamePetImpl 
-> Asp.Net Core exploration sendbox based on simple board game implementation
+> Asp.Net Core exploration sandbox based on simple board game implementation
 
 # Pages
 * Main page
