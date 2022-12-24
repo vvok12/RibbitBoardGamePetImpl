@@ -3,7 +3,7 @@
     class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
   >
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">RibbitBoardGamePetImpl</a>
+      <a class="navbar-brand" [routerLink]="['/']">Ribbit Board Game </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -27,16 +27,23 @@
           >
             <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
           </li>
+        <li class="nav-item" [routerLinkActive]="['link-active']" >
+          <a class="nav-link text-dark" [routerLink]="['/rules']">Rules</a>
+        </li>
+
+        <ng-container *ngIf="isSignedIn()">
           <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
+            <a class="nav-link text-dark" [routerLink]="['/playroom']">Playroom</a>
           </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
-            >
+          <li class="nav-item" [routerLinkActive]="['link-active']" >
+            <a class="nav-link text-dark" [routerLink]="['/board']">Board</a>
           </li>
+        </ng-container>
+
+        <li class="nav-item" [routerLinkActive]="['link-active']" *ngIf="!isSignedIn()">
+            <a class="nav-link text-dark" [routerLink]="['/sign-in']">Sign In</a>
+        </li>
+
         </ul>
       </div>
     </div>
