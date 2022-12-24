@@ -26,3 +26,11 @@
 > 2 - manages cards (each player should have 5 card each time)
 > 3 - remembers turtles positions
 > 4 - manages turns
+
+
+<hr>
+# Develper notes
+* to generate new angular component: ng generate component component-name --skip-import 
+* angular this proj nameing convention: 
+> components named "this-way"
+> folders on the other hand should fit "this_way"
